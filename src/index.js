@@ -16,7 +16,7 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri: 'http://175.10.21.156:3001/graphiql',
+    uri: process.env.API_BASEPATH,
   }),
   resolvers,
   typeDefs,
